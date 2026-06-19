@@ -1,112 +1,90 @@
-# Inventory & Order Management System
+## 🔗 Project Resources
 
-A production-ready assessment project with a React frontend, FastAPI backend API, PostgreSQL persistence, and Docker Compose orchestration.
+### GitHub Repository
 
-## Features
+[Inventory Management Repository](https://github.com/Chirag0603/Inventory-management?utm_source=chatgpt.com)
 
-- Product CRUD with unique SKU validation and non-negative stock.
-- Customer create/list/read/delete with unique email validation.
-- Order create/list/read/delete with automatic total calculation.
-- Inventory validation prevents orders when stock is insufficient.
-- Successful order creation reduces stock; canceling an order restores stock.
-- Responsive dashboard with totals and low-stock count.
-- Environment-based configuration with no hardcoded production credentials.
+The GitHub repository contains the complete source code, project structure, Docker configuration, environment setup instructions, and deployment-ready implementation of the Inventory & Order Management System.
 
-## Tech Stack
+---
 
-- Frontend: React + Vite
-- Backend: Python + FastAPI + SQLAlchemy
-- Database: PostgreSQL
-- Containerization: Docker + Docker Compose
+### Live Frontend Application
 
-## Local Development
+[Live Frontend Demo](https://inventory-management-three-gules.vercel.app?utm_source=chatgpt.com)
+
+The deployed frontend provides a responsive user interface for managing products, customers, orders, and inventory operations in real time.
+
+---
+
+### Live Backend API
+
+[Backend API Service](https://inventory-management-k23x.onrender.com?utm_source=chatgpt.com)
+
+The FastAPI backend powers all business logic, inventory validation, order processing, and database interactions through RESTful API endpoints.
+
+---
+
+### API Documentation
+
+[Interactive API Documentation (Swagger UI)](https://inventory-management-k23x.onrender.com/docs?utm_source=chatgpt.com)
+
+Automatically generated OpenAPI documentation that allows developers to explore, test, and understand all available API endpoints directly from the browser.
+
+---
+
+### Health Check Endpoint
+
+[Backend Health Check](https://inventory-management-k23x.onrender.com/health?utm_source=chatgpt.com)
+
+A lightweight monitoring endpoint used to verify that the backend service is running and responding correctly in the deployed environment.
+
+---
+
+### Docker Hub Image
+
+[Inventory Management Backend Image](https://hub.docker.com/r/chirag060300/inventory-management-backend?utm_source=chatgpt.com)
+
+The Docker Hub repository hosts the production-ready backend image, enabling quick deployment and consistent execution across development, testing, and production environments.
+
+**Latest Image Tag**
 
 ```bash
-docker compose up --build
+chirag060300/inventory-management-backend:latest
 ```
 
-Frontend: http://localhost:8080
+---
 
-Backend API: http://localhost:8000
+## ☁️ Deployment Architecture
 
-API docs: http://localhost:8000/docs
+| Component          | Platform   |
+| ------------------ | ---------- |
+| Frontend           | Vercel     |
+| Backend API        | Render     |
+| Database           | PostgreSQL |
+| Container Registry | Docker Hub |
 
-## Run Without Docker
+---
 
-Backend:
+## ✅ Submission Checklist
 
-```bash
-cd backend
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-copy .env.example .env
-uvicorn app.main:app --reload
-```
+* [x] GitHub Repository
+* [x] Docker Hub Backend Image
+* [x] Live Frontend Deployment
+* [x] Live Backend API
+* [x] Interactive API Documentation
+* [x] Backend Health Check Endpoint
+* [x] Dockerized Application
+* [x] Product CRUD Operations
+* [x] Customer Management
+* [x] Order Management
+* [x] Inventory Validation & Stock Tracking
+* [x] Responsive Dashboard
+* [x] Environment-Based Configuration
 
-Frontend:
+---
 
-```bash
-npm install
-npm run dev
-```
+## 👨‍💻 Author
 
-## Environment Variables
+**Chirag Singh**
 
-Backend:
-
-- `DATABASE_URL`: SQLAlchemy PostgreSQL URL.
-- `CORS_ORIGINS`: Comma-separated allowed frontend origins.
-
-Frontend:
-
-- `VITE_API_URL`: Public backend API URL.
-
-Docker Compose also supports:
-
-- `POSTGRES_DB`
-- `POSTGRES_USER`
-- `POSTGRES_PASSWORD`
-
-## API Summary
-
-Products:
-
-- `POST /products`
-- `GET /products`
-- `GET /products/{id}`
-- `PUT /products/{id}`
-- `DELETE /products/{id}`
-
-Customers:
-
-- `POST /customers`
-- `GET /customers`
-- `GET /customers/{id}`
-- `DELETE /customers/{id}`
-
-Orders:
-
-- `POST /orders`
-- `GET /orders`
-- `GET /orders/{id}`
-- `DELETE /orders/{id}`
-
-## Deployment Notes
-
-Suggested free deployment path:
-
-- Backend: Render, Railway, or Fly.io.
-- Frontend: Vercel or Netlify.
-- Database: Render PostgreSQL, Railway PostgreSQL, Neon, or Supabase.
-- Docker image: build and push `backend/Dockerfile` to Docker Hub.
-
-Set `DATABASE_URL` and `CORS_ORIGINS` in the backend host. Set `VITE_API_URL` in the frontend host to the deployed backend API URL.
-
-## Submission Checklist
-
-- GitHub repository link.
-- Docker Hub backend image link.
-- Live frontend URL.
-- Live backend API URL.
-
+Inventory & Order Management System developed as a full-stack assessment project using React, FastAPI, PostgreSQL, Docker, and modern software engineering best practices.
