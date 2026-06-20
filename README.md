@@ -1,5 +1,4 @@
 # Inventory & Order Management System
-<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/c95f8d57-da77-4be0-a310-edd162a2721c" />
 
 
 A production-ready assessment project with a React frontend, FastAPI backend API, PostgreSQL persistence, and Docker Compose orchestration.
